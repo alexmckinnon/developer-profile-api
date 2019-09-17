@@ -28,6 +28,16 @@ let db = new sqlite3.Database('developer-profile.db', (err) => {
     });
 });
 
+
+/**
+ * Retrieve user data
+ * Returns json data containing user account names
+ */
+app.get('/', (req, res) => {
+    res.send("Developer Profile API");
+})
+
+
 /**
  * Retrieve user data
  * Returns json data containing user account names
