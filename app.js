@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Start server and listen on port 80
-app.listen(80);
+app.listen(process.env.PORT || 80);
 
 // Set up sqlite database
 let db = new sqlite3.Database('developer-profile.db', (err) => {
