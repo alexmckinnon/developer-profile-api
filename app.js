@@ -1,11 +1,15 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const sqlite3 = require('sqlite3').verbose();
 const bodyParser = require('body-parser');
 
 // Set up body-parser to accept json data
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(bodyParser.json())
+
+// Enable CORS
+app.use(cors());
 
 // Start server and listen on port 80
 app.listen(process.env.PORT || 80);
